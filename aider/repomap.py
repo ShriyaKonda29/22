@@ -400,7 +400,7 @@ class RepoMap:
         except ZeroDivisionError:
             # Handle case where graph has no valid edges for PageRank calculation
             if self.verbose:
-                self.io.tool_warning("PageRank calculation failed due to graph structure - no valid edges found")
+                self.io.tool_warning("PageRank calculation failed - graph has no valid edges")
             return []
 
         # distribute the rank from each source node, across all of its out edges
